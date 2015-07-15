@@ -1,0 +1,15 @@
+language: objective-c
+osx_image: xcode6.4
+script: make
+env:
+  global:
+    - DEPLOY_HOST=55a1cc835004460171000096@builds.koszek.com
+    - DEPLOY_LOCATION=app-root/runtime/repo/
+    - DEPLOY_KEY=660bb4253f33
+    - DEPLOY_FILE=travis_deploy/objc_edu
+
+after_success:
+- make pack
+- RELFILENAME=`make relfilename`
+- git clone https://github.com/wkoszek/travis_deploy.git
+- ./travis_deploy/deploy.sh ${RELFILENAME}
