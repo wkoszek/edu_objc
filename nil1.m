@@ -7,7 +7,5 @@ main()
 
 	obj = nil;
 
-	retObj = [obj Russell:@"I am your only friend"];
-
 	NSLog(@"retObj: %@", retObj);
 }
