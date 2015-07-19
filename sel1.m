@@ -60,7 +60,7 @@ main(int argc, char **argv)
 
 	person = [[Person alloc] init];
 	[person printWithLabel:@"after init"];
-	[person setName: [[[NSString alloc] initWithUTF8String: "sample"] autorelease]];
+	[person setName: [[NSString alloc] initWithUTF8String: "sample"]];
 	[person setAge: 20];
 	[person printWithLabel: @"after name set"];
 
