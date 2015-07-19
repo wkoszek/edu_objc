@@ -7,7 +7,7 @@ SRCS_EXCLUDED=
 SRCS=$(filter-out $(SRCS_EXCLUDED),$(SRCS_ALL))
 OBJECTS:=$(SRCS:.m=.prog)
 LINT_FILES:=$(SRCS:.m=.lint)
-OBJCFLAGS+=-Wall -pedantic -std=c99 -g -ggdb
+OBJCFLAGS+=-ObjC -fobjc-arc -Wall -pedantic -std=c99 -g -ggdb
 OBJCFLAGS+=-framework Foundation
 IS_GCC = $(shell ${CC} --version | awk '/Free Software/ { i++ } END { print i ? "YES" : "NO" }')
 
