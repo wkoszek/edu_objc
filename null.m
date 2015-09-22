@@ -34,9 +34,11 @@ main(int argc, char **argv)
 	NSLog(@"makeNull: %d", makeNull);
 
 	@autoreleasepool {
-		Film *film = [Film new];
+		Film *film;
 		if (makeNull) {
 			film = nil;
+		} else {
+			film = [Film new];
 		}
 
 		NSLog(@"1: film:%@ howManyActors:%@", film, [film howManyActors]);
