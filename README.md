@@ -1,5 +1,7 @@
 # Objective C exercises
 
+[![Build Status](https://travis-ci.org/wkoszek/objc_edu.svg?branch=master)](https://travis-ci.org/wkoszek/objc_edu)
+
 Type:
 
 	make
